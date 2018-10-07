@@ -183,25 +183,24 @@ app.get('/friend', (req, res) => {
 });
 
 scrapeProxies.then(fetched => {
-    fs.writeFile('Source/proxies.txt', fetched.join("\n"), (err) => {
+    fs.writeFile('Source/proxies.txt', fetched, (err) => {
         if (err) throw err;
         proxyChecker.checkProxiesFromFile('Source/proxies.txt', {
-            url: 'http://www.example.com',
-            regex: /Example Domain/
+            url: 'https://discordapp.com',
+            regex: /It's time to ditch Skype and TeamSpeak./
         }, (host, port, ok, statusCode, err) => {
             if (ok) proxies.push(`${host}:${port}`);
         });
     });
     console.log(`Checking ${fetched.length} proxies!`);
-}).catch(error => {
-    var len = fs.readFileSync('./Source/proxies.txt', 'utf-8').split("\n").length;
+}).catch(err => {
     proxyChecker.checkProxiesFromFile('Source/proxies.txt', {
-        url: 'http://www.example.com',
-        regex: /Example Domain/
+        url: 'https://discordapp.com',
+        regex: /It's time to ditch Skype and TeamSpeak./
     }, (host, port, ok, statusCode, err) => {
         if (ok) proxies.push(`${host}:${port}`);
     });
-    console.log(`Checking ${len} proxies!`);
+    console.log(`Checking proxies from proxies.txt!`);
 });
 
 var t = -1;
