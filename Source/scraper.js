@@ -6,7 +6,7 @@ var scrapeProxies = new Promise((resolve, reject) => {
         url: "https://proxyscrape.com/proxies/HTTP_Working_Proxies.txt",
     }, (error, response, body) => {
         if (body) {
-            return resolve(body);
+            return resolve(body.split("\n"));
         } else {
             return reject();
         }
