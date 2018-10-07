@@ -189,8 +189,7 @@ scrapeProxies.then(fetched => {
     fs.writeFile('Source/proxies.txt', fetched.join("\n"), (err) => {
         if (err) throw err;
         proxyChecker.checkProxiesFromFile('Source/proxies.txt', {
-            url: 'https://discordapp.com',
-            regex: /It's time to ditch Skype and TeamSpeak./
+            url: 'http://www.example.com',
         }, (host, port, ok, statusCode, err) => {
             if (ok) proxies.push(`${host}:${port}`);
         });
@@ -198,8 +197,7 @@ scrapeProxies.then(fetched => {
     console.log(`Checking ${fetched.length} proxies!`);
 }).catch(err => {
     proxyChecker.checkProxiesFromFile('Source/proxies.txt', {
-        url: 'https://discordapp.com',
-        regex: /It's time to ditch Skype and TeamSpeak./
+        url: 'http://www.example.com',
     }, (host, port, ok, statusCode, err) => {
         if (ok) proxies.push(`${host}:${port}`);
     });
