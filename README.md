@@ -9,7 +9,7 @@ Install NodeJS: https://nodejs.org/en/download/
 Run this command in console
 
 ```
-sudo npm install
+npm install
 ```
 
 ## Tokens
