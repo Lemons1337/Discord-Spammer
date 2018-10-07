@@ -36,14 +36,10 @@ It will also check proxies as fast as it can!
 
 ## Starting
 
-Go inside of the "Setups" folder and the same folder as installation
-
-Run the start application
+Run this command
 
 ```
-Linux   | start.sh
-Mac     | start.sh
-Windows | start.bat
+node index.js
 ```
 
 ## Usage
