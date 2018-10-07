@@ -6,14 +6,10 @@ Advanced Discord Spammer with multiple options and auto scraping proxies!
 
 Install NodeJS: https://nodejs.org/en/download/
 
-Run these commands in console
+Run this command in console
 
 ```
-npm install request
-npm install express
-npm install proxy-checker
-npm install ejs
-npm install fs
+sudo npm install
 ```
 
 ## Tokens
