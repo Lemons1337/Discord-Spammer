@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discord Spammer</title>
+    <meta name="author" content="Lemons1337"/>
+    <meta name="description" content="Lemons1337"/>
+    <meta name="keywords" content="discord spammer, discord raidbot, free discord spammer, discord spammy, discord spam, discord raids"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="menu active">
+        <button id="Join" class="method">Join Guild</button>
+        <button id="Leave" class="method">Leave Guild</button>
+        <button id="Spam" class="method">Channel Spammer</button>
+        <button id="DM" class="method">DM Spammer</button>
+        <button id="Friend" class="method">Friend Spammer</button>
+        <span>Verified Tokens: <span id="verified"><%= verified %></span></span>
+        <span>Unverified Tokens: <span id="unverified"><%= unverified %></span></span>
+        <span>Working Proxies: <span id="proxies"><%= proxies %></span></span>
+    </div>
+
+    <div class="menu-btn active"><span></span></div>
+
+    <div id="join" style="display: none;" class="container">
+
+        <h1>Join Guild</h1>
+        
+        <div class="form">
+          <input id="invite" type="text" placeholder="Invite Code">
+          <button class="send" id="join-btn">Send</button>
+        </div>
+  
+      </div>
+  
+      <div id="leave" style="display: none;" class="container">
+  
+        <h1>Leave Guild</h1>
+        
+        <div class="form">
+          <input id="guild" type="text" placeholder="Guild ID">
+          <button class="send" id="leave-btn">Send</button>
+        </div>
+  
+      </div>
+
+      <div id="spam" style="display: none;" class="container">
+
+      <h1>Channel Spammer</h1>
+      
+      <div class="form">
+        <input id="channel" type="text" placeholder="Channel ID">
+        <textarea id="msg" type="text" placeholder="Message to send"></textarea>
+
+        <h2>Text to speech</h2>
+        
+        <br>
+
+        <label class="switch">
+          <input id="tts" type="checkbox">
+          <span class="slider round"></span>
+        </label>
+
+        <br>
+        <br>
+
+        <button class="send" id="spam-btn">Send</button>
+      </div>
+
+    </div>
+
+    <div id="dm" style="display: none;" class="container">
+
+      <h1>DM Spammer</h1>
+      
+      <div class="form">
+        <input id="user" type="text" placeholder="User ID">
+        <textarea id="message" type="text" placeholder="Message to send"></textarea>
+        <button class="send" id="dm-btn">Send</button>
+      </div>
+
+    </div>
+
+    <div id="friend" style="display: none;" class="container">
+
+      <h1>Friend Spammer</h1>
+      
+      <div class="form">
+        <input id="user2" type="text" placeholder="User ID">
+        <button class="send" id="friend-btn">Send</button>
+      </div>
+
+    </div>
+
+    <a class="github" title="Check out my github" alt="Check out my github" href="https://github.com/Lemons1337" target="_blank">
+        <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+    </a>
+
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script src="js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+</body>
+
+</html>
