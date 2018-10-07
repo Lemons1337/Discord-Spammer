@@ -1,6 +1,6 @@
 {
   "name": "discord-spammer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Advanced Discord Spammer with multiple options and auto scraping proxies!",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "express": "^4.16.3",
     "request": "^2.88.0",
     "fs": "^0.0.1-security",
-    "proxy-checker": "^1.0.0"
+    "proxy-checker": "^1.0.0",
+    "ejs": "^2.6.1"
   },
   "engines": {
     "node": "8.12.0"
