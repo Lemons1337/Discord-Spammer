@@ -183,7 +183,10 @@ app.get('/friend', (req, res) => {
 });
 
 scrapeProxies.then(fetched => {
-    fs.writeFile('Source/proxies.txt', fetched, (err) => {
+    if (fetched.length > config.max_proxies) {
+        fetched.splice(config.max_proxies - fetched.length);
+    }
+    fs.writeFile('Source/proxies.txt', fetched.join("\n"), (err) => {
         if (err) throw err;
         proxyChecker.checkProxiesFromFile('Source/proxies.txt', {
             url: 'https://discordapp.com',
