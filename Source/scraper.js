@@ -26,7 +26,12 @@ var scrapeProxies = new Promise((resolve, reject) => {
                 console.log(message);
                 return reject(message);
             }
-            return resolve(fetched);
+            request({
+                method: "GET",
+                url: "https://proxyscrape.com/proxies/HTTP_Working_Proxies.txt",
+            }, (error, response, body) => {
+                return resolve(body + "\n" + fetched);
+            });
         });
     });
 });
