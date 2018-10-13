@@ -47,7 +47,7 @@ app.get('/join', (req, res) => {
         json.message = "Please specify a valid invite!";
         return res.end(JSON.stringify(json));
     } else {
-        var invite = req.query.invite.toString().replace(/https:\/\/|http:\/\/|discord\.gg|discordapp\.com|[^A-Za-z0-9]/gi, '');
+        var invite = req.query.invite.toString().replace(/https:\/\/|http:\/\/|discord\.gg|discordapp\.com/gi, '');
         var json = {};
         json.type = "success";
         json.title = "Sent Bots To Join";
