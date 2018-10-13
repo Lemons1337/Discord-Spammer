@@ -47,7 +47,7 @@ app.get('/join', (req, res) => {
         json.message = "Please specify a valid invite!";
         return res.end(JSON.stringify(json));
     } else {
-        var invite = req.query.invite.toString().replace(/https:\/\/|http:\/\/|discord\.gg|discordapp\.com|[^A-Za-z0-9]/);
+        var invite = req.query.invite.toString().replace(/https:\/\/|http:\/\/|discord\.gg|discordapp\.com|[^A-Za-z0-9]/gi, '');
         var json = {};
         json.type = "success";
         json.title = "Sent Bots To Join";
@@ -205,14 +205,11 @@ scrapeProxies.then(fetched => {
 });
 
 var t = -1;
-var g = -1;
 setInterval(() => {
     if (t >= authTokens.length) return;
-    if (g >= proxies.length) g = -1;
     request({
         method: "GET",
         url: "https://discordapp.com/api/v7/users/@me",
-        proxy: `http://${proxies[g++]}`,
         headers: {
             authorization: authTokens[t++]
         }
@@ -228,7 +225,7 @@ setInterval(() => {
             tokens.push(authTokens[t]);
         }
     });
-}, 250);
+}, 100);
 
 process.on('uncaughtException', (err) => {});
 
