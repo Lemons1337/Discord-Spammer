@@ -54,4 +54,4 @@ You will be able to choose from any of these options
 
 ## Contact
 
-Telegram Chat: https://t.me/DiscordSpammer
+Telegram Chat: https://t.me/NanoTheDroid
