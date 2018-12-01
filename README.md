@@ -55,3 +55,7 @@ You will be able to choose from any of these options
 ## Contact
 
 Telegram Chat: https://t.me/DiscordTools
+
+## Donate
+
+Bitcoin: 1JKtC7rQNo23iA9p35XaovetKvs5RDF1S
