@@ -3,7 +3,7 @@ const request = require('request');
 var scrapeProxies = new Promise((resolve, reject) => {
     request({
         method: "GET",
-        url: "https://proxyscrape.com/proxies/HTTP_Working_Proxies.txt",
+        url: "https://www.proxy-list.download/api/v1/get?type=http",
     }, (error, response, body) => {
         if (body) {
             return resolve(body.split("\n"));
